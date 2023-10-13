@@ -476,7 +476,6 @@ h1 ~ .paragraph {
     
     .projects-room {
         margin-top: 72px;
-        background: url(../images/roomMobile.png) no-repeat;
         height: 241px;
         background-size: cover;
         background-position: center;

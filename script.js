@@ -1,4 +1,3 @@
-
 const createLinks = () => {
   const projectsList = document.querySelector(".projects-list");
 
@@ -9,7 +8,7 @@ const createLinks = () => {
     const createdA = document.createElement("a");
     createdA.classList.add("projects-list__link");
 
-    createdA.innerText = project.city + ' ' + project.style;
+    createdA.innerText = project.city + " " + project.style;
 
     if (index === 0) {
       createdA.classList.add("active");
@@ -54,8 +53,9 @@ const area = document.querySelector(".area");
 const time = document.querySelector(".time");
 const cost = document.querySelector(".cost");
 const design = document.querySelector(".design-image");
-const prev = document.querySelector(".carousel-last");
-const next = document.querySelector(".carousel-next");
+const prev = document.querySelectorAll(".carousel-last, .sliderNavigation-last");
+const next = document.querySelectorAll(".carousel-next, .sliderNavigation-next");
+const designMobile = document.querySelector(".projects-room")
 const projectLinks = document.querySelectorAll(".projects-list__link");
 const projectDots = document.querySelectorAll(".carousel-dots");
 
@@ -67,6 +67,7 @@ const displayProject = (index) => {
   time.innerText = project.time;
   cost.innerText = project.cost;
   design.src = project.image;
+  designMobile.style.backgroundImage = `url(${project.image})`;
 
   setActiveLink(index);
   setActiveDot(index);
@@ -81,12 +82,16 @@ const setProject = (index) => {
   currentIndex = index;
 };
 
-prev.addEventListener("click", () => {
-  setProject(currentIndex - 1);
+prev.forEach((e) => {
+  e.addEventListener("click", () => {
+    setProject(currentIndex - 1);
+  });
 });
 
-next.addEventListener("click", () => {
-  setProject(currentIndex + 1);
+next.forEach((e) => {
+  e.addEventListener("click", () => {
+    setProject(currentIndex + 1);
+  });
 });
 
 projectLinks.forEach((element, index) => {
