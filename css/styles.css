@@ -8,6 +8,7 @@ body {
     font-size: 1em;
     line-height: 1.4;
     font-weight: normal;
+    overflow-x: hidden;
 }
 
 .wrapper {
