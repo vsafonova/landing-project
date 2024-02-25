@@ -21,7 +21,7 @@ const createLinks = () => {
 
 const projectsData = [
   {
-    city: "Rostov-on-Don",
+    city: "Stockholm",
     style: "LCD admiral",
     area: "81 m2",
     time: "3.5 months",
@@ -29,7 +29,7 @@ const projectsData = [
     image: "./images/slider1.png",
   },
   {
-    city: "Sochi",
+    city: "Uppsala",
     style: "Thieves",
     area: "105 m2",
     time: "4 months",
@@ -37,7 +37,7 @@ const projectsData = [
     image: "./images/slider2.png",
   },
   {
-    city: "Rostov-on-Don",
+    city: "Västerås",
     style: "Patriotic",
     area: "93 m2",
     time: "3 months",
